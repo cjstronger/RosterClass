@@ -2,12 +2,22 @@
 
 class Roster{
     public:
-        void add(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3, DegreeProgram degreeProgram);
+        int count = 0;
+        void add(Student student){
+            classRosterArray[count] = student;
+            count++;
+        }
         void remove(string studentID);
-        void printAll();
+        void printAll(){
+            for(int i = 0; i < count; i++){
+                cout << classRosterArray[i] << endl;
+            }
+        }
+        Student getStudent(string studentID);
         void printAverageDaysInCourse(string studentID);
         void printInvalidEmails();
         void printByDegreeProgram(DegreeProgram degree);
+        Roster::~Roster();
     private:
         Student classRosterArray[10];
 };
