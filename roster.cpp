@@ -43,7 +43,6 @@ void Roster::printAverageDaysInCourse(string studentID){
 void Roster::printInvalidEmails(){
     for (int i = 0; i < count; i++) {
         string email = classRosterArray[i].getStudentEmail();
-        bool invalid = false;
         
         if (email.find('@') == string::npos ||
             email.find('.') == string::npos ||

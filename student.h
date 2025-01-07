@@ -1,6 +1,5 @@
 #include <iostream>
 #include <string>
-#include <datetimeapi.h>
 #include "degree.h"
 using namespace std;
 

@@ -17,7 +17,7 @@ class Roster{
         void printAverageDaysInCourse(string studentID);
         void printInvalidEmails();
         void printByDegreeProgram(DegreeProgram degree);
-        Roster::~Roster();
+        ~Roster();
     private:
-        Student classRosterArray[10];
+        Student* classRosterArray = new Student[10];
 };
